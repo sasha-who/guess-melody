@@ -8,7 +8,12 @@ const Settings = {
 
 it(`App should render correctly`, () => {
   const tree = renderer
-    .create(<App errorsCount={Settings.ERRORS_COUNT} />)
+    .create(
+        <App
+          errorsCount={Settings.ERRORS_COUNT}
+          onWelcomeButtonClick={() => {}}
+        />
+    )
     .toJSON();
 
   expect(tree).toMatchSnapshot();
